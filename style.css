@@ -535,6 +535,53 @@ body {
     font-weight: 600;
 }
 
+/* ====== Project Filters ====== */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn:hover {
+    background: var(--primary-color);
+    color: #121212;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: #121212;
+    box-shadow: 0 4px 10px rgba(187, 134, 252, 0.3);
+}
+
+/* ====== Project Cards Filtering ====== */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+.project-card.visible {
+    display: block;
+    animation: fadeInUp 0.5s ease forwards;
+}
 /* ====== Projects Section ====== */
 .projects {
     padding: 100px 50px;
@@ -572,8 +619,10 @@ body {
 
 .project-img img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: var(--card-bg);
     transition: transform 0.5s ease;
 }
 
@@ -651,7 +700,130 @@ body {
     border-radius: 20px;
     font-size: 0.8rem;
 }
+/* ====== Carousel Styles ====== */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
 
+.carousel-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: var(--card-bg);
+}
+
+/* Carousel Controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(187, 134, 252, 0.8);
+    color: #121212;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    opacity: 0;
+}
+
+.carousel-container:hover .carousel-control {
+    opacity: 1;
+}
+
+.carousel-control:hover {
+    background: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control.prev {
+    left: 15px;
+}
+
+.carousel-control.next {
+    right: 15px;
+}
+
+.carousel-control i {
+    font-size: 1rem;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-container:hover .carousel-indicators {
+    opacity: 1;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: var(--secondary-color);
+}
+
+/* Enhanced project image for carousel */
+.project-card .project-img {
+    height: 240px;
+    position: relative;
+}
+
+/* Auto-play pause on hover */
+.carousel-container.paused .carousel-control,
+.carousel-container.paused .carousel-indicators {
+    opacity: 1;
+}
 /* ====== Contact Section ====== */
 .contact {
     padding: 100px 50px;
