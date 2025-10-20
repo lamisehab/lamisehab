@@ -33,7 +33,7 @@
     <section id="home" class="landing">
         <div class="landing-content">
             <h2>Hello, I'm <span class="highlight">Lamis Elayouty</span></h2>
-            <h3><span id="typing" data-text="Data Analyst | Python Developer"></span></h3>
+            <h3><span id="typing" data-text="Data Analyst | Developer"></span></h3>
             <p>Magically transforming your data into insights that aids the business descision you need.</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn primary-btn">View My Work</a>
@@ -248,140 +248,280 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="section-header">
-            <h2>Projects</h2>
-            <div class="header-line"></div>
+    <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="section-header">
+        <h2>Projects</h2>
+        <div class="header-line"></div>
+        <p>Explore my work organized by technology</p>
+    </div>
+    <div class="projects-container">
+        <!-- Project Filter Tabs -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="excel">Excel</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="powerbi">Power BI</button>
+            <button class="filter-btn" data-filter="sql">SQL</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
         </div>
-        <div class="projects-container">
-            <div class="projects-grid">
-                <!-- DataCamp Excel 1 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="project3.png" alt="Excel Analysis">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/lamisehab/customer-churn-analysis-databel-"target="_blank"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/lamisehab/customer-churn-analysis-databel-"target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
+        
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+            <!-- Excel Projects -->
+            <div class="project-card" data-category="excel">
+                <div class="project-img">
+                    <img src="project3.png" alt="Excel Analysis">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/lamisehab/customer-churn-analysis-databel-" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/lamisehab/customer-churn-analysis-databel-" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Customer Churn Analysis using Excel</h3>
-                        <p>Used Excel (power query, pivot tables) to analyze the reason of churn in Dataleb company.</p>
-                        <div class="project-tags">
-                            <span>Excel</span>
-                            <span>Powerquery</span>
-                            <span>Data Cleaning</span>
-                        </div>
-                        <a href="https://github.com/lamisehab/customer-churn-analysis-databel-" class="btn primary-btn" target="_blank">View on GitHub</a>
                     </div>
                 </div>
-                <!--  Excel project 3 Datacamp 2 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="datacamp2.png" alt="Excel Analysis">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/lamisehab/Net-Revenue-Managment"target="_blank"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/lamisehab/Net-Revenue-Managment"target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                <div class="project-info">
+                    <h3>Customer Churn Analysis using Excel</h3>
+                    <p>Used Excel (power query, pivot tables) to analyze the reason of churn in Dataleb company.</p>
+                    <div class="project-tags">
+                        <span>Excel</span>
+                        <span>Powerquery</span>
+                        <span>Data Cleaning</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Net Revenue Management- Analysis using Excel</h3>
-                        <p>Thourough Analysis of the shampoo category for a FMCG company using excel</p>
-                        <div class="project-tags">
-                            <span>power query</span>
-                            <span>Statistical Analysis</span>
-                            <span>Excel</span>
-                            <span>Pivot Table</span>
+                    <a href="https://github.com/lamisehab/customer-churn-analysis-databel-" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="excel">
+                <div class="project-img">
+                    <img src="datacamp2.png" alt="Excel Analysis">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/lamisehab/Net-Revenue-Managment" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/lamisehab/Net-Revenue-Managment" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
-                        <a href="https://github.com/lamisehab/Net-Revenue-Managment" class="btn primary-btn" target="_blank">View Project</a>
                     </div>
                 </div>
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="excel.PNG" alt="Excel Dashboard">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#"><i class="fas fa-link"target="_blank"></i></a>
-                                <a href="#"><i class="fab fa-github"target="_blank"></i></a>
-                            </div>
-                        </div>
+                <div class="project-info">
+                    <h3>Net Revenue Management- Analysis using Excel</h3>
+                    <p>Thourough Analysis of the shampoo category for a FMCG company using excel</p>
+                    <div class="project-tags">
+                        <span>power query</span>
+                        <span>Statistical Analysis</span>
+                        <span>Excel</span>
+                        <span>Pivot Table</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Lung Cancer Analysis Dashboard</h3>
-                        <p>Created an interactive Excel dashboard to analyze Lung cancer risk factors using pivot tables and Power Query.</p>
-                        <div class="project-tags">
-                            <span>Excel</span>
-                            <span>Power Query</span>
-                            <span>Data Visualization</span>
+                    <a href="https://github.com/lamisehab/Net-Revenue-Managment" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="excel">
+                <div class="project-img">
+                    <img src="excel.PNG" alt="Excel Dashboard">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
-                        <a href="#" class="btn primary-btn" target="_blank">View Project</a>
                     </div>
                 </div>
+                <div class="project-info">
+                    <h3>Lung Cancer Analysis Dashboard</h3>
+                    <p>Created an interactive Excel dashboard to analyze Lung cancer risk factors using pivot tables and Power Query.</p>
+                    <div class="project-tags">
+                        <span>Excel</span>
+                        <span>Power Query</span>
+                        <span>Data Visualization</span>
+                    </div>
+                    <a href="#" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="excel">
+                <div class="project-img">
+                    <img src="wse.png" alt="Excel analysis">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Sales Analysis Dashboard</h3>
+                    <p>Performed data cleaning, transformation, and modeling using Power Query and Power Pivot. Created a dynamic dashboard to visualize KPIs and uncover actionable insights</p>
+                    <div class="project-tags">
+                        <span>power query</span>
+                        <span>Data Visualization</span>
+                        <span>Excel</span>
+                        <span>Pivot Table</span>
+                        <span>Power Pivot</span>
+                    </div>
+                    <a href="#" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            
+            <!-- Python Projects -->
+            <div class="project-card" data-category="python">
+                <div class="project-img">
+                    <img src="titanic.png" alt="Python analysis">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/lamisehab/Titanic-Survival-Dataset" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/lamisehab/Titanic-Survival-Dataset" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Titanic Survival Analysis</h3>
+                    <p>Exploratory Data Analysis of Titanic Survival dataset using Python</p>
+                    <div class="project-tags">
+                        <span>python</span>
+                        <span>Data cleaning</span>
+                        <span>pandas</span>
+                        <span>matplotlib</span>
+                        <span>seaborn</span>
+                    </div>
+                    <a href="https://github.com/lamisehab/Titanic-Survival-Dataset" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            
+            
+            <!-- Power BI projects -->
+            <div class="project-card" data-category="powerbi">
+                <div class="project-img">
+                    <img src="pbi1.png" alt="Power BI Dashboard">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/lamisehab/Performance-Analysis-PowerBI" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/lamisehab/Performance-Analysis-PowerBI" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Performance Analysis Dashboard</h3>
+                    <p>Interactive Power BI dashboard showing sales trends and KPIs.</p>
+                    <div class="project-tags">
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Data Visualization</span>
+                    </div>
+                    <a href="https://github.com/lamisehab/Performance-Analysis-PowerBI" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
+            <div class="project-card" data-category="powerbi">
                     <div class="project-img">
-                        <img src="excel2.PNG" alt="Excel analysis">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#"target="_blank"><i class="fas fa-link"></i></a>
-                                <a href="#"target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Sales Distribution Dashboard</h3>
-                        <p>Designed excel dashboard to track customer behavior and visualize key business metrics.</p>
-                        <div class="project-tags">
-                            <span>power query</span>
-                            <span>Data Visualization</span>
-                            <span>Excel</span>
-                            <span>Pivot Table</span>
-                        </div>
-                        <a href="#" class="btn primary-btn" target="_blank">View Project</a>
-                    </div>
+        <div class="carousel-container">
+            <div class="carousel-slides">
+                <div class="carousel-slide active">
+                    <img src="pbi2-1.PNG" alt="Power BI Dashboard - Overview">
                 </div>
-                <!-- Project 1python titanic -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="titanic.png" alt="Python analysis">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/lamisehab/Titanic-Survival-Dataset"target="_blank"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/lamisehab/Titanic-Survival-Dataset"target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Titanic Survival Analysis</h3>
-                        <p>Exploratory Data Analysis of Titanic Survival dataset using Python</p>
-                        <div class="project-tags">
-                            <span>python</span>
-                            <span>Data cleaning</span>
-                            <span>pandas</span>
-                            <span>matplotlib</span>
-                            <span>seaborn</span>
-                        </div>
-                        <a href="https://github.com/lamisehab/Titanic-Survival-Dataset" class="btn primary-btn" target="_blank">View Project</a>
-                    </div>
+                <div class="carousel-slide">
+                    <img src="pbi2-2.PNG" alt="Power BI Dashboard - Sales Analysis">
                 </div>
-
-               
+                <div class="carousel-slide">
+                    <img src="pbi2-3.PNG" alt="Power BI Dashboard - Regional Performance">
+                </div>
+                <div class="carousel-slide">
+                    <img src="pbi2-4.PNG" alt="Power BI Dashboard - Regional Performance">
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
             </div>
         </div>
-    </section>
+        <div class="project-overlay">
+            <div class="project-links">
+                <a href="https://github.com/lamisehab/Sales-Analysis---Using-Power-BI" target="_blank"><i class="fas fa-link"></i></a>
+                <a href="https://github.com/lamisehab/Sales-Analysis---Using-Power-BI" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+            <div class="project-info">
+                    <h3>Sales Analysis Dashboard</h3>
+                    <p>Interactive Power BI dashboard showing sales trends and KPIs.</p>
+                    <div class="project-tags">
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Data Visualization</span>
+                    </div>
+                    <a href="https://github.com/lamisehab/Sales-Analysis---Using-Power-BI" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            
+            
+            <!-- Example for SQL projects -->
+            <!--
+            <div class="project-card" data-category="sql">
+                <div class="project-img">
+                    <img src="sql-project.jpg" alt="SQL Database">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Database Design & Query Optimization</h3>
+                    <p>Designed and implemented a relational database with optimized queries.</p>
+                    <div class="project-tags">
+                        <span>SQL</span>
+                        <span>Database Design</span>
+                        <span>Query Optimization</span>
+                    </div>
+                    <a href="#" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            -->
+            
+            <!-- Example for Web Development projects -->
+            <!--
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <img src="web-project.jpg" alt="Web Application">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Data Visualization Web App</h3>
+                    <p>Interactive web application for data visualization using Python Flask and JavaScript.</p>
+                    <div class="project-tags">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>Flask</span>
+                        <span>Data Visualization</span>
+                    </div>
+                    <a href="#" class="btn primary-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="section-header">
             <h2>Contact Me</h2>
             <div class="header-line"></div>
-            <p>Let's connect! Feel free to reach out</p>
+            <p>You can Find me on these platforms !</p>
         </div>
         <div class="contact-container">
             <div class="contact-content">
@@ -391,26 +531,26 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>ayoutylamis@gmail.com</p>
+                            <h3>Freelancer</h3>
+                            <a href="https://www.freelancer.com/u/ELamis"><p>freelancer.com account</p> </a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>LinkedIn</h3>
-                            <p>linkedin.com/in/lamis-el-ayouty</p>
+                            <h3>Freelancer</h3>
+                            <a href="https://www.upwork.com/freelancers/~01bae1d82415de01e9"><p>upwork account</p> </a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fab fa-github"></i>
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>GitHub</h3>
-                            <p>github.com/lamis-elayouty</p>
+                            <h3>مستقل</h3>
+                            <a href=https://mostaql.com/u/lamis_ehab><p>mostaql account</p> </a>
                         </div>
                     </div>
                 </div>
@@ -437,7 +577,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <h2>Lamis Elayouty</h2>
-                <p>Data Analyst & Python Developer</p>
+                <p>Data Analyst & Developer</p>
             </div>
             <div class="footer-links">
                 <a href="#home">Home</a>
@@ -449,7 +589,7 @@
             <div class="footer-social">
                 <a href="https://www.linkedin.com/in/lamis-el-ayouty/"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/lamisehab/lamisehab/"><i class="fab fa-github"></i></a>
-                <a href="https://www.upwork.com/freelancers/~01bae1d82415de01e9"><i class="fa-brands fa-upwork"></i></a>
+                <a href="mailto:ayoutylamis@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
