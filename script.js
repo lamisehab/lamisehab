@@ -203,3 +203,169 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run once on load
     animateOnScroll();
 });
+
+// Project filtering functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const filterValue = button.getAttribute('data-filter');
+        
+        // Filter projects
+        projectCards.forEach(card => {
+            if (filterValue === 'all') {
+                card.classList.remove('hidden');
+                card.classList.add('visible');
+            } else {
+                if (card.getAttribute('data-category') === filterValue) {
+                    card.classList.remove('hidden');
+                    card.classList.add('visible');
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('visible');
+                }
+            }
+        });
+    });
+});
+// Carousel functionality
+function initializeCarousels() {
+    const carousels = document.querySelectorAll('.carousel-container');
+    
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevBtn = carousel.querySelector('.carousel-control.prev');
+        const nextBtn = carousel.querySelector('.carousel-control.next');
+        const indicators = carousel.querySelectorAll('.indicator');
+        
+        let currentSlide = 0;
+        let autoPlayInterval;
+        
+        // Function to show specific slide
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Ensure index is within bounds
+            if (index >= slides.length) currentSlide = 0;
+            else if (index < 0) currentSlide = slides.length - 1;
+            else currentSlide = index;
+            
+            // Add active class to current slide and indicator
+            slides[currentSlide].classList.add('active');
+            if (indicators[currentSlide]) {
+                indicators[currentSlide].classList.add('active');
+            }
+        }
+        
+        // Next slide function
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        // Previous slide function
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // Auto-play function
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+        }
+        
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+        
+        // Event listeners for controls
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                nextSlide();
+                stopAutoPlay();
+                startAutoPlay(); // Restart autoplay after manual interaction
+            });
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                prevSlide();
+                stopAutoPlay();
+                startAutoPlay(); // Restart autoplay after manual interaction
+            });
+        }
+        
+        // Event listeners for indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showSlide(index);
+                stopAutoPlay();
+                startAutoPlay(); // Restart autoplay after manual interaction
+            });
+        });
+        
+        // Pause autoplay on hover
+        carousel.addEventListener('mouseenter', () => {
+            stopAutoPlay();
+            carousel.classList.add('paused');
+        });
+        
+        carousel.addEventListener('mouseleave', () => {
+            startAutoPlay();
+            carousel.classList.remove('paused');
+        });
+        
+        // Keyboard navigation
+        carousel.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+        
+        // Initialize first slide and start autoplay
+        showSlide(0);
+        startAutoPlay();
+        
+        // Clean up on project filter change
+        const observer = new MutationObserver(() => {
+            if (!carousel.closest('.project-card').classList.contains('hidden')) {
+                startAutoPlay();
+            } else {
+                stopAutoPlay();
+            }
+        });
+        
+        observer.observe(carousel.closest('.project-card'), {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+    });
+}
+
+// Initialize carousels when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Your existing DOMContentLoaded code...
+    
+    // Initialize carousels
+    initializeCarousels();
+    
+    // Re-initialize carousels when projects are filtered
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Small delay to ensure DOM update is complete
+            setTimeout(initializeCarousels, 100);
+        });
+    });
+});
